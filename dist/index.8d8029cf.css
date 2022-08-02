@@ -212,4 +212,121 @@ body {
   margin-right: 1rem;
 }
 
+.side-nav {
+  margin-top: 3.5rem;
+  font-size: 1.4rem;
+  list-style: none;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .side-nav {
+    margin: 0;
+    display: flex;
+  }
+}
+
+.side-nav__item {
+  position: relative;
+}
+
+.side-nav__item:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .side-nav__item:not(:last-child) {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .side-nav__item {
+    flex: 1;
+  }
+}
+
+.side-nav__item:before {
+  content: "";
+  height: 100%;
+  width: 3px;
+  background-color: var(--color-primary);
+  transition: transform .2s, width .4s cubic-bezier(1, 0, 0, 1) .2s, background-color .1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+}
+
+.side-nav__item:hover:before, .side-nav__item--active:before {
+  width: 100%;
+  transform: scaleY(1);
+}
+
+.side-nav__item:active:before {
+  background-color: var(--color-primary-light);
+}
+
+.side-nav__link:link, .side-nav__link:visited {
+  color: var(--color-grey-light-1);
+  text-transform: uppercase;
+  z-index: 10;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .side-nav__link:link, .side-nav__link:visited {
+    justify-content: center;
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .side-nav__link:link, .side-nav__link:visited {
+    flex-direction: column;
+    padding: 1.5rem .5rem;
+  }
+}
+
+.side-nav__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: currentColor;
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .side-nav__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: .7rem;
+    margin-right: 0;
+  }
+}
+
+.legal {
+  color: var(--color-grey-light-4);
+  text-align: center;
+  padding: 2.5rem;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .legal {
+    display: none;
+  }
+}
+
+.gallery {
+  display: flex;
+}
+
+.gallery__photo {
+  width: 100%;
+  display: block;
+}
+
 /*# sourceMappingURL=index.8d8029cf.css.map */
