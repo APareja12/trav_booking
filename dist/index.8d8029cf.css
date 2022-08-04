@@ -550,4 +550,31 @@ body {
   }
 }
 
+.recommend {
+  color: var(--color-grey-dark-3);
+  align-items: center;
+  font-size: 1.3rem;
+  display: flex;
+}
+
+.recommend__count {
+  margin-right: auto;
+}
+
+.recommend__friends {
+  display: flex;
+}
+
+.recommend__photo {
+  box-sizing: content-box;
+  height: 4rem;
+  width: 4rem;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.recommend__photo:not(:last-child) {
+  margin-right: -2rem;
+}
+
 /*# sourceMappingURL=index.8d8029cf.css.map */
